@@ -137,8 +137,9 @@ a img{
 
   .fooder-drawer .mdl-layout-title {
     position: relative;
-    background: #6ab344;
-    height: 160px;
+    background: rgb(0,150,136);
+    height: 64px;
+    color: white;
   }
 
     .fooder-drawer .android-logo-image {
