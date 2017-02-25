@@ -38,7 +38,7 @@
       <!-- <img class="android-logo-image" src="images/android-logo-white.png"> -->
     </span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Home</a>
+      <a class="mdl-navigation__link" [routerLink]="['/search']">Search</a>
       <a class="mdl-navigation__link" href="">Selected</a>
     </nav>
   </div>
@@ -47,7 +47,11 @@
     <a name="top"></a>
 
     <div class="fooder-more-section">
-      <div class="fooder-section-title mdl-typography--display-1-color-contrast">{{title}}</div>
+      <div class="fooder-section-title mdl-typography--display-1-color-contrast">
+
+        <router-outlet></router-outlet>
+
+      </div>
       <div class="fooder-card-container mdl-grid">
         <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
           <div class="mdl-card__media">
