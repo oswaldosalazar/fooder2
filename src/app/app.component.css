@@ -26,7 +26,6 @@ a img{
   margin: 0 !important;
 }
 
-
 .mdl-textfield--expandable {
   width: auto;
 }
@@ -370,7 +369,7 @@ a img{
 .fooder-card-container {
 }
 
-  .fooder-card-container .mdl-card__media {
+  /*.fooder-card-container .mdl-card__media {
     overflow: hidden;
     background: transparent;
   }
@@ -398,12 +397,12 @@ a img{
   .fooder-card-container .mdl-card__actions {
     position: absolute;
     bottom: 0;
-  }
+  }*/
 
-  .fooder-card-container .mdl-card__actions a {
+  /*.fooder-card-container .mdl-card__actions a {
     border-top: none;
     font-size: 16px;
-  }
+  }*/
 
 .fooder-footer {
   background-color: #fafafa;
