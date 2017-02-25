@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { geolocation }
+import { GeolocationService } from '../../services/geolocation.service';
 
 @Component({
   selector: 'app-search',
@@ -11,7 +11,7 @@ export class SearchComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    title = 'app works!';
+    // title = 'app works!';
   }
 
 }
