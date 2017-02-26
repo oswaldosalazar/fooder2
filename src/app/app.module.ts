@@ -7,6 +7,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './components/search/search.component';
 
+import { GeolocationService } from '../app/services/geolocation.service';
+
 const appRoutes: Routes = [
   { path: '', component: SearchComponent }
 ];
@@ -22,7 +24,9 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    GeolocationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

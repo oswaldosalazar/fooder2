@@ -43,108 +43,105 @@ a img{
   display: none !important;
 }
 
-
 .android-logo-image {
   height: 28px;
   width: 140px;
 }
-
 
 .fooder-header {
   overflow: visible;
   /*background-color: white;*/
 }
 
-  .fooder-header .material-icons {
-    color: #FFFFFF !important;
-  }
+.fooder-header .material-icons {
+  color: #FFFFFF !important;
+}
 
-  .fooder-header .mdl-layout__drawer-button {
-    background: transparent;
-    color: #767777;
-  }
+.fooder-header .mdl-layout__drawer-button {
+  background: transparent;
+  color: #767777;
+}
 
-  .fooder-header .mdl-navigation__link {
-    color: #FFFFFF;
-    font-weight: 700;
-    font-size: 14px;
-  }
+.fooder-header .mdl-navigation__link {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 14px;
+}
 
-  .fooder-navigation-container {
-    /* Simple hack to make the overflow happen to the left instead... */
-    direction: rtl;
-    order: 1;
-    width: 500px;
-    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+.fooder-navigation-container {
+  /* Simple hack to make the overflow happen to the left instead... */
+  direction: rtl;
+  order: 1;
+  width: 500px;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+      width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  .fooder-navigation {
-    /* ... and now make sure the content is actually LTR */
-    direction: ltr;
-    justify-content: flex-end;
-    width: 800px;
-  }
+.fooder-navigation {
+  /* ... and now make sure the content is actually LTR */
+  direction: ltr;
+  justify-content: flex-end;
+  width: 800px;
+}
 
-  .fooder-search-box.is-focused + .fooder-navigation-container {
-    opacity: 0;
-    width: 100px;
-  }
+.fooder-search-box.is-focused + .fooder-navigation-container {
+  opacity: 0;
+  width: 100px;
+}
 
 
-  .fooder-navigation .mdl-navigation__link {
-    display: inline-block;
-    height: 60px;
-    line-height: 68px;
-    background-color: transparent !important;
-    border-bottom: 4px solid transparent;
-  }
+.fooder-navigation .mdl-navigation__link {
+  display: inline-block;
+  height: 60px;
+  line-height: 68px;
+  background-color: transparent !important;
+  border-bottom: 4px solid transparent;
+}
 
-    .fooder-navigation .mdl-navigation__link:hover {
-      border-bottom: 4px solid #8bc34a;
-    }
+.fooder-navigation .mdl-navigation__link:hover {
+  border-bottom: 4px solid #8bc34a;
+}
 
-  .fooder-search-box {
-    order: 2;
-    margin-left: 16px;
-    margin-right: 16px;
-  }
+.fooder-search-box {
+  order: 2;
+  margin-left: 16px;
+  margin-right: 16px;
+}
 
-  .fooder-more-button {
-    order: 3;
-  }
-
+.fooder-more-button {
+  order: 3;
+}
 
 .fooder-drawer {
   border-right: none;
 }
 
-  .fooder-drawer-separator {
-    height: 1px;
-    background-color: #dcdcdc;
-    margin: 8px 0;
-  }
+.fooder-drawer-separator {
+  height: 1px;
+  background-color: #dcdcdc;
+  margin: 8px 0;
+}
 
-  .fooder-drawer .mdl-navigation__link.mdl-navigation__link {
-    font-size: 14px;
-    color: #757575;
-  }
+.fooder-drawer .mdl-navigation__link.mdl-navigation__link {
+  font-size: 14px;
+  color: #757575;
+}
 
-  .fooder-drawer span.mdl-navigation__link.mdl-navigation__link {
-    color: #8bc34a;
-  }
+.fooder-drawer span.mdl-navigation__link.mdl-navigation__link {
+  color: #8bc34a;
+}
 
-  .fooder-drawer .mdl-layout-title {
-    position: relative;
-    background: rgb(0,150,136);
-    height: 64px;
-    color: white;
-  }
+.fooder-drawer .mdl-layout-title {
+  position: relative;
+  background: rgb(0,150,136);
+  height: 64px;
+  color: white;
+}
 
-    .fooder-drawer .android-logo-image {
-      position: absolute;
-      bottom: 16px;
-    }
+.fooder-drawer .android-logo-image {
+  position: absolute;
+  bottom: 16px;
+}
 
 .fooder-be-together-section {
   position: relative;
@@ -177,11 +174,11 @@ a img{
   padding-top: 400px;
 }
 
-  .fooder-create-character a {
-    text-decoration: none;
-    color: #767777;
-    font-weight: 300;
-  }
+.fooder-create-character a {
+  text-decoration: none;
+  color: #767777;
+  font-weight: 300;
+}
 
 .fooder-screen-section {
   position: relative;
@@ -216,10 +213,10 @@ a img{
   margin-right: 32px;
 }
 
-  .fooder-wear .fooder-screen-image {
-    width: 40%;
-    z-index: 1;
-  }
+.fooder-wear .fooder-screen-image {
+  width: 40%;
+  z-index: 1;
+}
 
 
 .fooder-phone {
@@ -228,10 +225,10 @@ a img{
   margin-right: 48px;
 }
 
-  .fooder-phone .fooder-screen-image {
-    width: 100%;
-    z-index: 1;
-  }
+.fooder-phone .fooder-screen-image {
+  width: 100%;
+  z-index: 1;
+}
 
 
 .fooder-tablet {
@@ -240,15 +237,15 @@ a img{
   margin-right: 64px;
 }
 
-  .fooder-tablet .fooder-screen-image {
-    width: 100%;
-    z-index: 1;
-  }
+.fooder-tablet .fooder-screen-image {
+  width: 100%;
+  z-index: 1;
+}
 
-  .fooder-tablet .fooder-link {
-    display: block;
-    z-index: 2;
-  }
+.fooder-tablet .fooder-link {
+  display: block;
+  z-index: 2;
+}
 
 
 .fooder-tv {
@@ -257,10 +254,10 @@ a img{
   margin-right: 80px;
 }
 
-  .fooder-tv .fooder-screen-image {
-    width: 100%;
-    z-index: 1;
-  }
+.fooder-tv .fooder-screen-image {
+  width: 100%;
+  z-index: 1;
+}
 
 
 .fooder-auto {
@@ -269,11 +266,11 @@ a img{
   overflow: hidden;
 }
 
-  .fooder-auto .fooder-screen-image {
-    display: block;
-    height: 300px;
-    z-index: 1;
-  }
+.fooder-auto .fooder-screen-image {
+  display: block;
+  height: 300px;
+  z-index: 1;
+}
 
 
 .fooder-wear-section {
@@ -299,24 +296,24 @@ a img{
   color: white;
 }
 
-  .fooder-wear-band-text p {
-    padding-top: 8px;
-  }
+.fooder-wear-band-text p {
+  padding-top: 8px;
+}
 
 .fooder-link {
   text-decoration: none;
   color: #8bc34a !important;
 }
 
-  .fooder-link:hover {
-    color: #7cb342 !important;
-  }
+.fooder-link:hover {
+  color: #7cb342 !important;
+}
 
-  .fooder-link .material-icons {
-    position: relative;
-    top: -1px;
-    vertical-align: middle;
-  }
+.fooder-link .material-icons {
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+}
 
 .fooder-alt-link {
   text-decoration: none;
@@ -324,14 +321,14 @@ a img{
   font-size: 16px;
 }
 
-  .fooder-alt-link:hover {
-    color: #00bfa5 !important;
-  }
+.fooder-alt-link:hover {
+  color: #00bfa5 !important;
+}
 
-  .fooder-alt-link .material-icons {
-    position: relative;
-    top: 6px;
-  }
+.fooder-alt-link .material-icons {
+  position: relative;
+  top: 6px;
+}
 
 .fooder-customized-section {
   text-align: center;
@@ -361,10 +358,10 @@ a img{
   margin-right: auto;
 }
 
-  .fooder-more-section .fooder-section-title {
-    margin-left: 12px;
-    padding-bottom: 24px;
-  }
+.fooder-more-section .fooder-section-title {
+  margin-left: 12px;
+  padding-bottom: 24px;
+}
 
 .fooder-card-container {
 }
@@ -409,31 +406,30 @@ a img{
   position: relative;
 }
 
-  .fooder-footer a:hover {
-    color: #8bc34a;
-  }
+.fooder-footer a:hover {
+  color: #8bc34a;
+}
 
-  .fooder-footer .mdl-mega-footer--top-section::after {
-    border-bottom: none;
-  }
+.fooder-footer .mdl-mega-footer--top-section::after {
+  border-bottom: none;
+}
 
-  .fooder-footer .mdl-mega-footer--middle-section::after {
-    border-bottom: none;
-  }
+.fooder-footer .mdl-mega-footer--middle-section::after {
+  border-bottom: none;
+}
 
-  .fooder-footer .mdl-mega-footer--bottom-section {
-    position: relative;
-  }
+.fooder-footer .mdl-mega-footer--bottom-section {
+  position: relative;
+}
 
-  .fooder-footer .mdl-mega-footer--bottom-section a {
-    margin-right: 2em;
-  }
+.fooder-footer .mdl-mega-footer--bottom-section a {
+  margin-right: 2em;
+}
 
-  .fooder-footer .mdl-mega-footer--right-section a .material-icons {
-    position: relative;
-    top: 6px;
-  }
-
+.fooder-footer .mdl-mega-footer--right-section a .material-icons {
+  position: relative;
+  top: 6px;
+}
 
 .fooder-link-menu:hover {
   cursor: pointer;
