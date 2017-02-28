@@ -30,8 +30,8 @@ export class SearchComponent implements OnInit {
           this.http.get(this.searchUrl)
           .subscribe(
             (data: any) => {
-              console.log(data);
-              this.results = data._body;
+              console.log(data.json());
+              this.results = data.json();
             }
           )
         }
