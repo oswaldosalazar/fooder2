@@ -7,7 +7,7 @@ export class GeolocationService {
 
 	constructor() { }
 
-  getCurrentPosition(): Observable<Position> {
+  getLocation(): Observable<Position> {
 
 		return new Observable((observer: Observer<Position>) => {
 			navigator.geolocation.getCurrentPosition(

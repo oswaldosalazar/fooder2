@@ -366,41 +366,6 @@ a img{
 .fooder-card-container {
 }
 
-  /*.fooder-card-container .mdl-card__media {
-    overflow: hidden;
-    background: transparent;
-  }
-
-    .fooder-card-container .mdl-card__media img {
-      width: 100%;
-    }
-
-  .fooder-card-container .mdl-card__title {
-    background: transparent;
-    height: auto;
-  }
-
-  .fooder-card-container .mdl-card__title-text {
-    color: black;
-    height: auto;
-  }
-
-  .fooder-card-container .mdl-card__supporting-text {
-    height: auto;
-    color: black;
-    padding-bottom: 56px;
-  }
-
-  .fooder-card-container .mdl-card__actions {
-    position: absolute;
-    bottom: 0;
-  }*/
-
-  /*.fooder-card-container .mdl-card__actions a {
-    border-top: none;
-    font-size: 16px;
-  }*/
-
 .fooder-footer {
   background-color: #fafafa;
   position: relative;
