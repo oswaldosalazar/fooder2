@@ -11,7 +11,7 @@ export class SearchComponent implements OnInit {
   longitude: string;
   locationString: string;
   searchUrl : string;
-  // results : [Object];
+  results : any;
 
   constructor( 
     private geolocation: GeolocationService,
@@ -25,26 +25,22 @@ export class SearchComponent implements OnInit {
         (position: Position) => {
           this.latitude = position.coords.latitude.toString();
           this.longitude = position.coords.longitude.toString();
+          this.locationString =  this.latitude + "," + this.longitude;
+          this.searchUrl = "https://api.foursquare.com/v2/venues/explore?ll=" + this.locationString + "&client_id=NHF0X5EXQLHYJ3IG5FIYSJYD2R33BLQSKGGQUBSIYMXWFYA4&client_secret=5TRQLKFODOFFJW55T0FHBH3BWNW3RFAOBK24BK2BSPB2QD3C&v=20170227&section=food&openNow=1";
+          this.http.get(this.searchUrl)
+          .subscribe(
+            (data: any) => {
+              console.log(data);
+              this.results = data._body;
+            }
+          )
         }
       )
     }
   }
 
   ngOnInit() {
-    this.locationString =  this.latitude + "," + this.longitude;
-    this.searchUrl = "https://api.foursquare.com/v2/venues/explore?ll=" + this.locationString + "&client_id=NHF0X5EXQLHYJ3IG5FIYSJYD2R33BLQSKGGQUBSIYMXWFYA4&client_secret=5TRQLKFODOFFJW55T0FHBH3BWNW3RFAOBK24BK2BSPB2QD3C&v=20161031&section=food&openNow=1";
-    // title = 'app works!';
     this.getCurrentPosition();
-    console.log(this.searchUrl);
-    this.http.get(this.searchUrl)
-    .subscribe(
-      (data: any) => {
-        console.log(data);
-      }
-
-    )
-    
-    
   }
 
 }
