@@ -11,7 +11,9 @@ export class SearchComponent implements OnInit {
   longitude: string;
   locationString: string;
   searchUrl : string;
-  results : any;
+  resultsJson : any;
+  resultsArray : any;
+
 
   constructor( 
     private geolocation: GeolocationService,
@@ -31,7 +33,8 @@ export class SearchComponent implements OnInit {
           .subscribe(
             (data: any) => {
               console.log(data.json());
-              this.results = data.json();
+              this.resultsJson = data.json();
+              this.resultsArray = this.resultsJson.response.groups[0].items;
             }
           )
         }
