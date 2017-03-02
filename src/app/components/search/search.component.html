@@ -1,22 +1,19 @@
-<!--<div class="fooder-card-container mdl-grid">
+<div *ngFor="let restaurant of this.resultsArray" class="fooder-card-container mdl-grid">
   <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
     <div class="mdl-card__media">
       <img src="images/more-from-1.png">
     </div>
     <div class="mdl-card__title">
-      <h4 class="mdl-card__title-text">Get going on fooder</h4>
+      <h4 class="mdl-card__title-text">{{ restaurant.venue.name }}</h4>
     </div>
     <div class="mdl-card__supporting-text">
-      <span class="mdl-typography--font-light mdl-typography--subhead">Four tips to make your switch to fooder quick and easy</span>
-      <h1>{{ latitude }}</h1>
-      <h1>{{ longitude }}</h1>
+      <span class="mdl-typography--font-light mdl-typography--subhead">{{ restaurant.venue.rating }}</span>
     </div>
     <div class="mdl-card__actions">
       <a class="fooder-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-        Make the switch
+        Select
         <i class="material-icons">chevron_right</i>
       </a>
     </div>
   </div>
-</div>-->
-{{ resultsArray }}
+</div>

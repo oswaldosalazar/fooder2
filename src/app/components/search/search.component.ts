@@ -13,13 +13,7 @@ export class SearchComponent implements OnInit {
   searchUrl : string;
   resultsJson : any;
   resultsArray : any;
-  today: string;
-  year: Date;
-  month: string;
-  day: string;
   currentDate: Date;
-  formattedDate: string;
-
 
   constructor( 
     private geolocation: GeolocationService,
@@ -31,7 +25,6 @@ export class SearchComponent implements OnInit {
     let year = this.currentDate.getFullYear();
     let mm = (this.currentDate.getMonth() + 1);
     let dd = (this.currentDate.getDate());
-    console.log([year,(mm>9?'':'0')+mm,(dd>9?'':'0')+dd].join(''));
     return [year,(mm>9?'':'0')+mm,(dd>9?'':'0')+dd].join('');
   }
 
@@ -47,7 +40,6 @@ export class SearchComponent implements OnInit {
           this.http.get(this.searchUrl)
           .subscribe(
             (data: any) => {
-              console.log(data.json());
               this.resultsJson = data.json();
               this.resultsArray = this.resultsJson.response.groups[0].items;
             }
@@ -58,7 +50,6 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getDate();
     this.getCurrentPosition();
   }
 
