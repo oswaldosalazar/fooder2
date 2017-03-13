@@ -6,7 +6,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './components/search/search.component';
+import { Ng2SwipeCardsComponent } from './components/ng2-swipe-cards/ng2-swipe-cards.component';
 
+import { Ng2SwipeCardsDirective } from './directives/ng2-swipe-cards.directive';
 import { GeolocationService } from '../app/services/geolocation.service';
 
 const appRoutes: Routes = [
@@ -16,7 +18,9 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent
+    SearchComponent,
+    Ng2SwipeCardsComponent,
+    Ng2SwipeCardsDirective
   ],
   imports: [
     BrowserModule,
