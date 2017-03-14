@@ -10,9 +10,11 @@ import { Ng2SwipeCardsComponent } from './components/ng2-swipe-cards/ng2-swipe-c
 
 import { Ng2SwipeCardsDirective } from './directives/ng2-swipe-cards.directive';
 import { GeolocationService } from '../app/services/geolocation.service';
+import { FooderMainComponent } from './components/fooder-main/fooder-main.component';
 
 const appRoutes: Routes = [
-  { path: '', component: SearchComponent }
+  { path: 'search', component: SearchComponent},
+  { path: 'selected', component: FooderMainComponent }
 ];
 
 @NgModule({
@@ -20,7 +22,8 @@ const appRoutes: Routes = [
     AppComponent,
     SearchComponent,
     Ng2SwipeCardsComponent,
-    Ng2SwipeCardsDirective
+    Ng2SwipeCardsDirective,
+    FooderMainComponent
   ],
   imports: [
     BrowserModule,

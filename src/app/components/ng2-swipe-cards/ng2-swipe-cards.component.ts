@@ -14,14 +14,6 @@ import {
   templateUrl: './ng2-swipe-cards.component.html',
   styleUrls: ['./ng2-swipe-cards.component.css']
 })
-// export class Ng2SwipeCardsComponent implements OnInit {
-
-//   constructor() { }
-
-//   ngOnInit() {
-//   }
-
-// }
 
 export class Ng2SwipeCardsComponent {
   @Input() fixed: Boolean = false;
