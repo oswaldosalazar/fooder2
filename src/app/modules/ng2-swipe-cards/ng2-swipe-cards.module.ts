@@ -10,6 +10,7 @@
 // export class Ng2SwipeCardsModule { }
 
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { Ng2SwipeCardsComponent  } from '../../components/ng2-swipe-cards/ng2-swipe-cards.component';
@@ -25,7 +26,8 @@ export class HammerConfig extends HammerGestureConfig {
 
 @NgModule({
     imports: [
-        BrowserModule
+        BrowserModule,
+        CommonModule
     ],
     declarations: [
         Ng2SwipeCardsComponent,
@@ -35,9 +37,9 @@ export class HammerConfig extends HammerGestureConfig {
         Ng2SwipeCardsComponent,
         Ng2SwipeCardsDirective
     ],
-    entryComponents: [
-        Ng2SwipeCardsComponent
-    ],
+    // entryComponents: [
+    //     Ng2SwipeCardsComponent
+    // ],
     providers: [{
         provide: HAMMER_GESTURE_CONFIG,
         useClass: HammerConfig
