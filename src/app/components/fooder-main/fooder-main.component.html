@@ -1,4 +1,4 @@
-<div class="left-panel">
+<!--<div class="left-panel">-->
   <div class="card-container">
       <sc-card
         *ngFor="let card of cards;let i = index;"
@@ -13,7 +13,7 @@
         <div class="card-header">
           <span>{{card.id}}</span>
         </div>
-        <div class="card-content">
+        <div class="fooder-card-container">
           <img [src]="card.url" draggable="false"/>
         </div>
       </sc-card>
@@ -22,8 +22,8 @@
     <button (click)="like(false)">Dislike</button>
     <button (click)="like(true)">Like</button>
   </div>
-</div>
-<div class="right-panel">
+<!--</div>-->
+<!--<div class="right-panel">
   <h2>Parameters</h2>
   <h3>Card</h3>
   <h4>orientation</h4>
@@ -55,4 +55,4 @@
   <div class="log-container" #tinderCardLog>
     <span *ngFor="let log of tinderCardLogs">{{log}}</span>
   </div>
-</div>
+</div>-->

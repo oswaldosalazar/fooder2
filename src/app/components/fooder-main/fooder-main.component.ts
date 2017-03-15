@@ -7,7 +7,7 @@ import { SwipeCardsModule } from '../../components/ng2-swipe-cards/index';
   selector: 'app-fooder-main',
   // encapsulation: ViewEncapsulation.None,
   templateUrl: './fooder-main.component.html',
-  // styleUrls: ['./fooder-main.component.css']
+  styleUrls: ['./fooder-main.component.css']
 })
 export class FooderMainComponent {
   @ViewChild('cardLog') cardLogContainer: any;
