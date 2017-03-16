@@ -84,7 +84,6 @@ export class Ng2SwipeCardsDirective {
       this.renderer.setElementStyle(this.overlayElement, "transition", "opacity 0s ease");
       this.renderer.setElementStyle(this.overlayElement, "opacity", opacity.toString());
       this.renderer.setElementStyle(this.overlayElement, "background-color", this.overlay[like ? "like" : "dislike"].backgroundColor);
-      console.log("Overlay: ",this.overlay, like, this)
     }
     this.translate({
       x: event.deltaX,

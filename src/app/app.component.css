@@ -341,9 +341,9 @@ a img{
   padding: 80px 16px 0 16px;
 }
 
-  .fooder-customized-section-text p {
-    padding-top: 16px;
-  }
+.fooder-customized-section-text p {
+  padding-top: 16px;
+}
 
 .fooder-customized-section-image {
   background: url('images/devices.jpg') center top no-repeat;
@@ -364,6 +364,15 @@ a img{
 }
 
 .fooder-card-container {
+  /*height: 400px;*/
+  /*margin:auto;*/
+  /*display: flex;*/
+  /*align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height:80%;
+  width:80%;
+  margin:10px auto;*/
 }
 
 .fooder-footer {
