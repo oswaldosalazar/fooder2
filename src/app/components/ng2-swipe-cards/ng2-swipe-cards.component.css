@@ -9,7 +9,6 @@
   touch-action: none !important;
 }
 :host(.card-heap) {
-  height: 100px;
   transition: transform 1s ease;
   display: block;
   position: absolute;
