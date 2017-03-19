@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation, ViewChild, TemplateRef, EventEmitter, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { SwipeCardsModule } from '../../components/ng2-swipe-cards/index';
+import { Ng2SwipeCardsModule } from '../../components/ng2-swipe-cards/index';
 
 @Component({
   selector: 'app-fooder-main',
@@ -9,6 +9,7 @@ import { SwipeCardsModule } from '../../components/ng2-swipe-cards/index';
   templateUrl: './fooder-main.component.html',
   styleUrls: ['./fooder-main.component.css']
 })
+
 export class FooderMainComponent {
   @ViewChild('cardLog') cardLogContainer: any;
   @ViewChild('tinderCardLog') tinderCardLogContainer: any;
@@ -87,10 +88,10 @@ export class FooderMainComponent {
   }
 }
 
-@NgModule({
-  imports: [BrowserModule, FormsModule, SwipeCardsModule],
-  declarations: [FooderMainComponent],
-  bootstrap: [FooderMainComponent]
-})
-export class AppModule { }
+// @NgModule({
+//   imports: [BrowserModule, FormsModule, Ng2SwipeCardsModule],
+//   declarations: [FooderMainComponent],
+//   bootstrap: [FooderMainComponent]
+// })
+// export class AppModule { }
 
