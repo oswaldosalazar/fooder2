@@ -81,8 +81,8 @@ export class Ng2SwipeCardsComponent {
   ngAfterViewChecked() {
 
     if (this.element.parentElement) {
-      // let height = this.element.parentElement.clientHeight;
-      let height = 200;
+      let height = this.element.parentElement.clientHeight;
+      // let height = 200;
 
       let width = this.element.parentElement.clientWidth;
       this.renderer.setElementStyle(this.element, "height", height + 'px');
