@@ -15,7 +15,7 @@ input[type="button"],
 button {
     background: none;
     border: 0;
-    color: inherit;
+    /*color: inherit;*/
     /* cursor: default; */
     font: inherit;
     line-height: normal;
@@ -34,7 +34,7 @@ button::-moz-focus-inner {
 
 /* Make `a` like a button */
 [role="button"] {
-    color: inherit;
+    /*color: inherit;*/
     cursor: default;
     display: inline-block;
     text-align: center;
@@ -52,12 +52,12 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button {
-    background-color: #f0f0f0;
+    /*background-color: #f0f0f0;
     border: 1px solid rgb(0, 0, 0);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0.25em;
     height: 2.5em;
-    line-height: 2.5;
+    line-height: 2.5;*/
     margin: 0.25em;
     padding: 0 1em;
     width: 14em;
@@ -129,7 +129,6 @@ sc-card {
 
 .card-content {
   display: flex;
-  /*flex-direction: column;*/
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -151,7 +150,7 @@ sc-card {
 }
 
 .buttons button {
-  background-color: #E1E1E1;
+  /*background-color: #E1E1E1;*/
   max-width:160px;
   width:50%;
 }

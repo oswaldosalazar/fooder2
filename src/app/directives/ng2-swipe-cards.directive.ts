@@ -1,14 +1,3 @@
-// import { Directive } from '@angular/core';
-
-// @Directive({
-//   selector: '[appNg2SwipeCards]'
-// })
-// export class Ng2SwipeCardsDirective {
-
-//   constructor() { }
-
-// }
-
 import {
   Component,
   Directive,
