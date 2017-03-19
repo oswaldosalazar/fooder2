@@ -61,7 +61,7 @@ export class FooderMainComponent {
   getKittenUrl() {
     var w = 500 - Math.floor((Math.random() * 100) + 1);
     var h = 500 - Math.floor((Math.random() * 100) + 1);
-    return "http://placekitten.com/" + w + "/" + h;
+    return "https://placekitten.com/" + w + "/" + h;
   }
 
   onRelease(event) {
