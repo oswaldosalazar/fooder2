@@ -11,8 +11,8 @@ import { Ng2SwipeCardsModule } from '../../components/ng2-swipe-cards/index';
 })
 
 export class FooderMainComponent {
-  @ViewChild('cardLog') cardLogContainer: any;
-  @ViewChild('tinderCardLog') tinderCardLogContainer: any;
+  // @ViewChild('cardLog') cardLogContainer: any;
+  // @ViewChild('tinderCardLog') tinderCardLogContainer: any;
 
 
   cards: any[] = [];
@@ -48,7 +48,7 @@ export class FooderMainComponent {
       self.cards[this.cardCursor++].likeEvent.emit({ like });
       // DO STUFF WITH YOUR CARD
       this.tinderCardLogs.push("callLike(" + JSON.stringify({ like }) + ")");
-      this.scrollToBottom(this.tinderCardLogContainer);
+      // this.scrollToBottom(this.tinderCardLogContainer);
     }
   }
 
@@ -56,7 +56,7 @@ export class FooderMainComponent {
     var item = this.cards[this.cardCursor++];
     // DO STUFF WITH YOUR CARD
     this.tinderCardLogs.push("onLike(" + JSON.stringify(event) + ")");
-    this.scrollToBottom(this.tinderCardLogContainer);
+    // this.scrollToBottom(this.tinderCardLogContainer);
   }
 
   getKittenUrl() {
@@ -67,25 +67,25 @@ export class FooderMainComponent {
 
   onRelease(event) {
     this.cardLogs.push("onRelease(event)");
-    this.scrollToBottom(this.cardLogContainer);
+    // this.scrollToBottom(this.cardLogContainer);
 
   }
 
   onAbort(event) {
     this.cardLogs.push("onAbort(event)");
-    this.scrollToBottom(this.cardLogContainer);
+    // this.scrollToBottom(this.cardLogContainer);
   }
 
   onSwipe(event) {
     this.cardLogs.push("onSwipe(event)");
-    this.scrollToBottom(this.cardLogContainer);
+    // this.scrollToBottom(this.cardLogContainer);
   }
 
-  scrollToBottom(el) {
-    setTimeout(() => {
-      el.nativeElement.scrollTop = el.nativeElement.scrollHeight;
-    }, 100);
-  }
+  // scrollToBottom(el) {
+  //   setTimeout(() => {
+  //     el.nativeElement.scrollTop = el.nativeElement.scrollHeight;
+  //   }, 100);
+  // }
 }
 
 // @NgModule({
