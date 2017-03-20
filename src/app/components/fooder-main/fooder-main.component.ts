@@ -1,7 +1,9 @@
-import { Component, ViewEncapsulation, ViewChild, TemplateRef, EventEmitter, NgModule } from '@angular/core';
+import { Component, ViewEncapsulation, ViewChild, TemplateRef, EventEmitter, NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { Ng2SwipeCardsModule } from '../../components/ng2-swipe-cards/index';
+import { GeolocationService } from '../../services/geolocation.service';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-fooder-main',
@@ -10,10 +12,18 @@ import { Ng2SwipeCardsModule } from '../../components/ng2-swipe-cards/index';
   styleUrls: ['./fooder-main.component.css']
 })
 
-export class FooderMainComponent {
+export class FooderMainComponent implements OnInit {
   // @ViewChild('cardLog') cardLogContainer: any;
   // @ViewChild('tinderCardLog') tinderCardLogContainer: any;
 
+  latitude : string;
+  longitude: string;
+  locationString: string;
+  searchUrl : string;
+  resultsJson : any;
+  resultsArray : any;
+  currentDate: Date;
+  cardTypes: any = [];
 
   cards: any[] = [];
   cardCursor: number = 0;
@@ -31,16 +41,10 @@ export class FooderMainComponent {
   tinderCardLogs: any = [];
 
 
-  constructor() {
-    for (var i = 0; i < 50; i++) {
-      this.cards.push({
-        id: i + 1,
-        likeEvent: new EventEmitter(),
-        destroyEvent: new EventEmitter(),
-        url: this.getKittenUrl()
-      });
-    }
-  }
+  constructor(
+    private geolocation: GeolocationService,
+    private http: Http
+  ) { }
 
   like(like) {
     var self = this;
@@ -81,17 +85,54 @@ export class FooderMainComponent {
     // this.scrollToBottom(this.cardLogContainer);
   }
 
-  // scrollToBottom(el) {
-  //   setTimeout(() => {
-  //     el.nativeElement.scrollTop = el.nativeElement.scrollHeight;
-  //   }, 100);
-  // }
-}
+  getDate() {
+    this.currentDate = new Date;
+    let year = this.currentDate.getFullYear();
+    let mm = (this.currentDate.getMonth() + 1);
+    let dd = (this.currentDate.getDate());
+    return [year,(mm>9?'':'0')+mm,(dd>9?'':'0')+dd].join('');
+  }
 
-// @NgModule({
-//   imports: [BrowserModule, FormsModule, Ng2SwipeCardsModule],
-//   declarations: [FooderMainComponent],
-//   bootstrap: [FooderMainComponent]
-// })
-// export class AppModule { }
+  getNearRestaurants() {
+    if(navigator.geolocation) {
+      this.geolocation.getLocation()
+      .subscribe(
+        (position: Position) => {
+          this.latitude = position.coords.latitude.toString();
+          this.longitude = position.coords.longitude.toString();
+          this.locationString =  this.latitude + "," + this.longitude;
+          
+          this.searchUrl = "https://api.foursquare.com/v2/venues/explore?ll=" + this.locationString + "&client_id=NHF0X5EXQLHYJ3IG5FIYSJYD2R33BLQSKGGQUBSIYMXWFYA4&client_secret=5TRQLKFODOFFJW55T0FHBH3BWNW3RFAOBK24BK2BSPB2QD3C&v="+this.getDate()+"&section=food&openNow=1";
+          this.http.get(this.searchUrl)
+          .subscribe(
+            (data: any) => {
+              this.resultsJson = data.json();
+              this.resultsArray = this.resultsJson.response.groups[0].items;
+              this.resultsArray.map( (elem) => {
+                let venueSearchUrl = "https://api.foursquare.com/v2/venues/"+elem.venue.id+"/photos?client_id=NHF0X5EXQLHYJ3IG5FIYSJYD2R33BLQSKGGQUBSIYMXWFYA4&client_secret=5TRQLKFODOFFJW55T0FHBH3BWNW3RFAOBK24BK2BSPB2QD3C&v="+this.getDate();
+                this.http.get(venueSearchUrl)
+                .subscribe((venuePicsUrl) => {
+                  let final:any = {};
+                  final.likeEvent = new EventEmitter(),
+                  final.destroyEvent = new EventEmitter(),
+                  final.venueId = elem.venue.id;
+                  final.name = elem.venue.name;
+                  final.rating = elem.venue.rating;
+                  final.hours = elem.venue.hours;
+                  final.address = elem.venue.location.address;
+                  final.url = venuePicsUrl.json().response.photos.items[0].prefix+'300x200'+venuePicsUrl.json().response.photos.items[0].suffix;
+                  this.cards.push(final);
+                })
+              })
+            }
+          );
+        }
+      )
+    }
+  }
+
+  ngOnInit(){
+    this.getNearRestaurants();
+  }
+}
 

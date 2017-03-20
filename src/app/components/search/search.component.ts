@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GeolocationService } from '../../services/geolocation.service';
-import { Http } from '@angular/http'
+import { Http } from '@angular/http';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',

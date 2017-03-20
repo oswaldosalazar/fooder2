@@ -14,7 +14,7 @@ import { FooderMainComponent } from './components/fooder-main/fooder-main.compon
 
 const appRoutes: Routes = [
   { path: 'search', component: SearchComponent},
-  { path: 'selected', component: FooderMainComponent }
+  { path: '', component: FooderMainComponent }
 ];
 
 @NgModule({

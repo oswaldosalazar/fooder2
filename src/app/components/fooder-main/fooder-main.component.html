@@ -14,7 +14,15 @@
         <span>{{card.id}}</span>
       </div>-->
       <div class="card-content">
-        <img [src]="card.url" draggable="false"/>
+        <div>
+          <img [src]="card.url" draggable="false"/>
+        </div>
+        <div class="mdl-card__title">
+          <h4 class="mdl-card__title-text">{{ card.name }}</h4>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <span class="mdl-typography--font-light mdl-typography--subhead">{{ card.rating }}</span>
+        </div>
       </div>
     </sc-card>
   </div>
