@@ -7,14 +7,11 @@ import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-fooder-main',
-  // encapsulation: ViewEncapsulation.None,
   templateUrl: './fooder-main.component.html',
   styleUrls: ['./fooder-main.component.css']
 })
 
 export class FooderMainComponent implements OnInit {
-  // @ViewChild('cardLog') cardLogContainer: any;
-  // @ViewChild('tinderCardLog') tinderCardLogContainer: any;
 
   latitude : string;
   longitude: string;
@@ -23,8 +20,6 @@ export class FooderMainComponent implements OnInit {
   resultsJson : any;
   resultsArray : any;
   currentDate: Date;
-  cardTypes: any = [];
-
   cards: any[] = [];
   cardCursor: number = 0;
   orientation: string = "x";
@@ -37,10 +32,6 @@ export class FooderMainComponent implements OnInit {
     }
   };
 
-  cardLogs: any = [];
-  tinderCardLogs: any = [];
-
-
   constructor(
     private geolocation: GeolocationService,
     private http: Http
@@ -51,39 +42,21 @@ export class FooderMainComponent implements OnInit {
     if (this.cards.length > 0) {
       self.cards[this.cardCursor++].likeEvent.emit({ like });
       // DO STUFF WITH YOUR CARD
-      this.tinderCardLogs.push("callLike(" + JSON.stringify({ like }) + ")");
-      // this.scrollToBottom(this.tinderCardLogContainer);
+
     }
   }
 
   onCardLike(event) {
     var item = this.cards[this.cardCursor++];
     // DO STUFF WITH YOUR CARD
-    this.tinderCardLogs.push("onLike(" + JSON.stringify(event) + ")");
-    // this.scrollToBottom(this.tinderCardLogContainer);
-  }
-
-  getKittenUrl() {
-    var w = 500 - Math.floor((Math.random() * 100) + 1);
-    var h = 500 - Math.floor((Math.random() * 100) + 1);
-    return "https://placekitten.com/" + w + "/" + h;
-  }
-
-  onRelease(event) {
-    this.cardLogs.push("onRelease(event)");
-    // this.scrollToBottom(this.cardLogContainer);
 
   }
 
-  onAbort(event) {
-    this.cardLogs.push("onAbort(event)");
-    // this.scrollToBottom(this.cardLogContainer);
-  }
+  onRelease(event) { }
 
-  onSwipe(event) {
-    this.cardLogs.push("onSwipe(event)");
-    // this.scrollToBottom(this.cardLogContainer);
-  }
+  onAbort(event) { }
+
+  onSwipe(event) { }
 
   getDate() {
     this.currentDate = new Date;
@@ -101,33 +74,34 @@ export class FooderMainComponent implements OnInit {
           this.latitude = position.coords.latitude.toString();
           this.longitude = position.coords.longitude.toString();
           this.locationString =  this.latitude + "," + this.longitude;
-          
           this.searchUrl = "https://api.foursquare.com/v2/venues/explore?ll=" + this.locationString + "&client_id=NHF0X5EXQLHYJ3IG5FIYSJYD2R33BLQSKGGQUBSIYMXWFYA4&client_secret=5TRQLKFODOFFJW55T0FHBH3BWNW3RFAOBK24BK2BSPB2QD3C&v="+this.getDate()+"&section=food&openNow=1";
+
           this.http.get(this.searchUrl)
           .subscribe(
             (data: any) => {
               this.resultsJson = data.json();
               this.resultsArray = this.resultsJson.response.groups[0].items;
-              this.resultsArray.map( (elem) => {
+              this.resultsArray.map( elem => {
                 let venueSearchUrl = "https://api.foursquare.com/v2/venues/"+elem.venue.id+"/photos?client_id=NHF0X5EXQLHYJ3IG5FIYSJYD2R33BLQSKGGQUBSIYMXWFYA4&client_secret=5TRQLKFODOFFJW55T0FHBH3BWNW3RFAOBK24BK2BSPB2QD3C&v="+this.getDate();
                 this.http.get(venueSearchUrl)
                 .subscribe((venuePicsUrl) => {
-                  let final:any = {};
-                  final.likeEvent = new EventEmitter(),
-                  final.destroyEvent = new EventEmitter(),
-                  final.venueId = elem.venue.id;
-                  final.name = elem.venue.name;
-                  final.rating = elem.venue.rating;
-                  final.hours = elem.venue.hours;
-                  final.address = elem.venue.location.address;
-                  final.url = venuePicsUrl.json().response.photos.items[0].prefix+'300x200'+venuePicsUrl.json().response.photos.items[0].suffix;
-                  this.cards.push(final);
-                })
-              })
+                  let card:any = {};
+                  card.number += 1;
+                  card.likeEvent = new EventEmitter();
+                  card.destroyEvent = new EventEmitter();
+                  card.venueId = elem.venue.id;
+                  card.name = elem.venue.name;
+                  card.rating = elem.venue.rating;
+                  card.hours = elem.venue.hours;
+                  card.address = elem.venue.location.address;
+                  card.url = venuePicsUrl.json().response.photos.items[0].prefix+'300x200'+venuePicsUrl.json().response.photos.items[0].suffix;
+                  this.cards.push(card);
+                });
+              });
             }
           );
         }
-      )
+      );
     }
   }
 

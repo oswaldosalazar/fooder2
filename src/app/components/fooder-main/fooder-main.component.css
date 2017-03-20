@@ -140,7 +140,7 @@ sc-card {
   width:50%;
 }
 
-.fooder-card-container .mdl-card__media {
+/*.fooder-card-container .mdl-card__media {
   overflow: hidden;
   background: transparent;
 }
@@ -172,4 +172,4 @@ sc-card {
 .fooder-card-container .mdl-card__actions a {
   border-top: none;
   font-size: 16px;
-}
+}*/
