@@ -164,7 +164,7 @@ a img{
 }
 
 .fooder-card-container {
-  height: 450px;
+  /*height: 450px;
   margin:auto;
   display: flex;
   align-items: center;
@@ -172,7 +172,7 @@ a img{
   flex-direction: column;
   height:80%;
   width:80%;
-  margin:10px auto;
+  margin:10px auto;*/
 }
 
 .fooder-footer {
@@ -219,14 +219,6 @@ a img{
   .fooder-title {
     display: none !important;
   }
-
-  /*.fooder-mobile-title {
-    display: block !important;
-    position: absolute;
-    left: calc(50% - 70px);
-    top: 12px;
-    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  }*/
 
   /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
      consecutive "+" operators in some cases. Therefore, we need to use both
