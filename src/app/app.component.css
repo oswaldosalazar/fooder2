@@ -150,13 +150,13 @@ a img{
 }
 
 .fooder-more-section {
-  padding: 80px 0;
-  /*max-width: auto;
-  max-height: auto;*/
+  /*padding: 80px 0;
+  max-width: auto;
+  max-height: auto;
   height: 290px;
   margin-left: auto;
   margin-right: auto;
-  /*display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;*/
@@ -177,36 +177,6 @@ a img{
   height:80%;
   width:80%;
   margin:10px auto;*/
-}
-
-.fooder-footer {
-  background-color: #fafafa;
-  position: relative;
-}
-
-.fooder-footer a:hover {
-  color: #8bc34a;
-}
-
-.fooder-footer .mdl-mega-footer--top-section::after {
-  border-bottom: none;
-}
-
-.fooder-footer .mdl-mega-footer--middle-section::after {
-  border-bottom: none;
-}
-
-.fooder-footer .mdl-mega-footer--bottom-section {
-  position: relative;
-}
-
-.fooder-footer .mdl-mega-footer--bottom-section a {
-  margin-right: 2em;
-}
-
-.fooder-footer .mdl-mega-footer--right-section a .material-icons {
-  position: relative;
-  top: 6px;
 }
 
 .fooder-link-menu:hover {

@@ -51,24 +51,36 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],*/
 
+.fooder-cards-page {
+  max-width: auto;
+  max-height: auto;
+  height: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 button {
-    height: 2.5em;
-    line-height: 2.5;
-    margin: 0.25em;
-    width: 14em;
-    padding: 0 0.5em;
+  height: 2.5em;
+  line-height: 2.5;
+  margin: 0.25em;
+  width: 14em;
+  padding: 0 0.5em;
 }
 
 .card-container {
   margin:auto;
-  /*display: flex;*/
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   height:80%;
   width:80%;
   margin:10px auto;
-  padding-bottom: 150px;
+  padding-bottom: 10px;
 }
 
 sc-card {
@@ -76,7 +88,6 @@ sc-card {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /*max-height: 500px;*/
   max-width: 300px;
 }
 
@@ -102,37 +113,3 @@ sc-card {
   max-width:130px;
   width:50%;
 }
-
-/*.fooder-card-container .mdl-card__media {
-  overflow: hidden;
-  background: transparent;
-}
-
-.fooder-card-container .mdl-card__media img {
-  width: 100%;
-}
-
-.fooder-card-container .mdl-card__title {
-  background: transparent;
-  height: auto;
-}
-
-.fooder-card-container .mdl-card__title-text {
-  color: black;
-  height: auto;
-}
-
-.fooder-card-container .mdl-card__supporting-text {
-  height: auto;
-  color: black;
-  padding-bottom: 56px;
-}
-
-.fooder-card-container .mdl-card__actions {
-  position: absolute;
-  bottom: 0;
-}
-.fooder-card-container .mdl-card__actions a {
-  border-top: none;
-  font-size: 16px;
-}*/

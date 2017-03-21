@@ -1,36 +1,39 @@
 
-  <div class="card-container mdl-grid">
-    <sc-card
-      *ngFor="let card of cards;let i = index;"
-      [callDestroy]="card.destroyEvent"
-      [orientation]="orientation"
-      (onRelease)="onRelease($event)"
-      (onSwipe)="onSwipe($event)"
-      (onAbort)="onAbort($event)"
-      [tinder-card]="overlay"
-      [callLike]="card.likeEvent"
-      (onLike)="onCardLike($event)">
-      <!--<div class="card-header">
-        <span>{{card.id}}</span>
-      </div>-->
-      <div class="card-content">
-        <div>
-          <img [src]="card.url" draggable="false"/>
+  <div class="fooder-cards-page">
+    <div class="card-container mdl-grid">
+      <sc-card
+        *ngFor="let card of cards;let i = index;"
+        [callDestroy]="card.destroyEvent"
+        [orientation]="orientation"
+        (onRelease)="onRelease($event)"
+        (onSwipe)="onSwipe($event)"
+        (onAbort)="onAbort($event)"
+        [tinder-card]="overlay"
+        [callLike]="card.likeEvent"
+        (onLike)="onCardLike($event)">
+        <!--<div class="card-header">
+          <span>{{card.id}}</span>
+        </div>-->
+        <div class="card-content">
+          <div>
+            <img [src]="card.url" draggable="false"/>
+          </div>
+          <div class="mdl-card__title">
+            <h5 class="mdl-card__title-text">{{ card.name }}</h5>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <span class="mdl-typography--font-light mdl-typography--subhead">{{ card.rating }}</span>
+          </div>
         </div>
-        <div class="mdl-card__title">
-          <h5 class="mdl-card__title-text">{{ card.name }}</h5>
-        </div>
-        <div class="mdl-card__supporting-text">
-          <span class="mdl-typography--font-light mdl-typography--subhead">{{ card.rating }}</span>
-        </div>
-      </div>
-    </sc-card>
+      </sc-card>
+    </div>
+    <div class="buttons">
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" (click)="like(false)">
+        Dislike
+      </button>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" (click)="like(true)">
+        Like
+      </button>
+    </div>
   </div>
-  <div class="buttons">
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" (click)="like(false)">
-      Dislike
-    </button>
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" (click)="like(true)">
-      Like
-    </button>
-  </div>
+  

@@ -4,21 +4,10 @@
     <div class="mdl-layout__header-row">
       <span class="fooder-title mdl-layout-title">
         fooder
-        <!-- <img class="android-logo-image" src="images/android-logo.png"> -->
       </span>
-      <!-- Add spacer, to align navigation to the right in desktop -->
       <div class="fooder-header-spacer mdl-layout-spacer"></div>
-      <!--<div class="fooder-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
-        <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-          <i class="material-icons">search</i>
-        </label>
-        <div class="mdl-textfield__expandable-holder">
-          <input class="mdl-textfield__input" type="text" id="search-field">
-        </div>
-      </div>-->
       <span class="fooder-mobile-title mdl-layout-title">
         fooder
-        <!-- <img class="android-logo-image" src="images/android-logo.png"> -->
       </span>
       <button class="fooder-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
         <i class="material-icons">more_vert</i>
@@ -33,7 +22,6 @@
   <div class="fooder-drawer mdl-layout__drawer">
     <span class="mdl-layout-title">
       fooder
-      <!-- <img class="android-logo-image" src="images/android-logo-white.png"> -->
     </span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" [routerLink]="['/search']">Search</a>
@@ -41,36 +29,11 @@
     </nav>
   </div>
 
-  <div class="fooder-content mdl-layout__content">
-    <a name="top"></a>
+  <div class="mdl-layout__content">
 
-    <div class="fooder-more-section">
+    <!--<div class="fooder-more-section">-->
             <router-outlet></router-outlet>
+    <!--</div>-->
 
-    </div>
-
-    <!--<footer class="fooder-footer mdl-mega-footer">
-      <div class="mdl-mega-footer--top-section">
-        <div class="mdl-mega-footer--left-section">
-          <button class="mdl-mega-footer--social-btn"></button>
-          &nbsp;
-          <button class="mdl-mega-footer--social-btn"></button>
-          &nbsp;
-          <button class="mdl-mega-footer--social-btn"></button>
-        </div>
-        <div class="mdl-mega-footer--right-section">
-          <a class="mdl-typography--font-light" href="#top">
-            Back to Top
-            <i class="material-icons">expand_less</i>
-          </a>
-        </div>
-      </div>
-
-      <div class="mdl-mega-footer--middle-section">
-        <p class="mdl-typography--font-light">Satellite imagery: © 2014 Astrium, DigitalGlobe</p>
-        <p class="mdl-typography--font-light">MIT License</p>
-      </div>
-
-    </footer>-->
   </div>
 </div>
