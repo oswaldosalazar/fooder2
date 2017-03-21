@@ -53,12 +53,12 @@ input[type="button"],*/
 
 .fooder-cards-page {
   max-width: auto;
-  max-height: auto;
+  /*max-height: auto;*/
   height: 480px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   justify-content: center;
   flex-direction: column;
 }
@@ -80,7 +80,7 @@ button {
   height:80%;
   width:80%;
   margin:10px auto;
-  padding-bottom: 10px;
+  padding: 20px, 10px;
 }
 
 sc-card {
