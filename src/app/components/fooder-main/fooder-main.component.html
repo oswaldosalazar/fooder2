@@ -1,5 +1,5 @@
 
-  <div class="card-container">
+  <div class="card-container mdl-grid">
     <sc-card
       *ngFor="let card of cards;let i = index;"
       [callDestroy]="card.destroyEvent"
@@ -18,7 +18,7 @@
           <img [src]="card.url" draggable="false"/>
         </div>
         <div class="mdl-card__title">
-          <h4 class="mdl-card__title-text">{{ card.name }}</h4>
+          <h5 class="mdl-card__title-text">{{ card.name }}</h5>
         </div>
         <div class="mdl-card__supporting-text">
           <span class="mdl-typography--font-light mdl-typography--subhead">{{ card.rating }}</span>
@@ -34,8 +34,3 @@
       Like
     </button>
   </div>
-
-  <!--<div class="buttons">
-    <button (click)="like(false)">Dislike</button>
-    <button (click)="like(true)">Like</button>
-  </div>-->

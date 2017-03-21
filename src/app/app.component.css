@@ -150,9 +150,10 @@ a img{
 }
 
 .fooder-more-section {
-  /*padding: 80px 0;*/
-  /*max-width: auto;*/
-  height: 550px;
+  padding: 80px 0;
+  max-width: auto;
+  max-height: auto;
+  height: 300px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -163,7 +164,7 @@ a img{
 }
 
 .fooder-card-container {
-  height: 200px;
+  height: 450px;
   margin:auto;
   display: flex;
   align-items: center;
@@ -246,40 +247,6 @@ a img{
   .fooder-search-box .mdl-textfield__expandable-holder {
     width: 100%;
   }
-
-  /*.fooder-be-together-section {
-    height: 350px;
-  }
-
-  .fooder-slogan {
-    font-size: 26px;
-    margin: 0 16px;
-    padding-top: 24px;
-  }
-
-  .fooder-sub-slogan {
-    font-size: 16px;
-    margin: 0 16px;
-    padding-top: 8px;
-  }
-
-  .fooder-create-character {
-    padding-top: 200px;
-    font-size: 16px;
-  }
-
-  .fooder-create-character img {
-    height: 12px;
-  }
-
-  .fooder-fab {
-    display: none;
-  }
-
-  .fooder-wear-band-text {
-    margin-left: 0;
-    padding: 16px;
-  }*/
 
   .fooder-footer .mdl-mega-footer--bottom-section {
     display: none;

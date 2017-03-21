@@ -94,7 +94,7 @@ export class FooderMainComponent implements OnInit {
                   card.rating = elem.venue.rating;
                   card.hours = elem.venue.hours;
                   card.address = elem.venue.location.address;
-                  card.url = venuePicsUrl.json().response.photos.items[0].prefix+'300x200'+venuePicsUrl.json().response.photos.items[0].suffix;
+                  card.url = venuePicsUrl.json().response.photos.items[0].prefix+'300x250'+venuePicsUrl.json().response.photos.items[0].suffix;
                   this.cards.push(card);
                 });
               });
