@@ -61,7 +61,7 @@ button {
 
 .card-container {
   margin:auto;
-  display: flex;
+  /*display: flex;*/
   align-items: center;
   justify-content: center;
   flex-direction: column;
