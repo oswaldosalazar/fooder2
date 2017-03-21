@@ -76,8 +76,8 @@ button {
 }
 
 sc-card {
-  /*display: flex;*/
-  /*align-items: center;*/
+  display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   /*max-height: 500px;*/
