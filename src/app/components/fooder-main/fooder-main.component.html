@@ -1,5 +1,3 @@
-
-  <div class="fooder-cards-page">
     <div class="card-container">
       <sc-card
         *ngFor="let card of cards;let i = index;"
@@ -11,9 +9,6 @@
         [tinder-card]="overlay"
         [callLike]="card.likeEvent"
         (onLike)="onCardLike($event)">
-        <!--<div class="card-header">
-          <span>{{card.id}}</span>
-        </div>-->
         <div class="card-content">
           <div>
             <img [src]="card.url" draggable="false"/>
@@ -27,6 +22,7 @@
         </div>
       </sc-card>
     </div>
+
     <div class="buttons">
       <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" (click)="like(false)">
         Dislike
@@ -35,5 +31,4 @@
         Like
       </button>
     </div>
-  </div>
   

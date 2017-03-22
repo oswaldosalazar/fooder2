@@ -1,5 +1,5 @@
-[role="button"],
-input[type="submit"],
+/*[role="button"],
+input[type="submit"],*/
 /*input[type="reset"],
 input[type="button"],
 button {
@@ -51,16 +51,10 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],*/
 
-.fooder-cards-page {
-  max-width: auto;
-  /*max-height: auto;*/
-  height: 480px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  /*align-items: center;*/
-  justify-content: center;
-  flex-direction: column;
+.mdl-layout__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button {
@@ -77,8 +71,8 @@ button {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height:80%;
-  width:80%;
+  height:400px;
+  width:100%;
   margin:10px auto;
   padding: 20px, 10px;
 }
