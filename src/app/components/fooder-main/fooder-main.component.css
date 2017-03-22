@@ -1,23 +1,22 @@
 /*[role="button"],
-input[type="submit"],*/
-/*input[type="reset"],
+input[type="submit"],
+input[type="reset"],
 input[type="button"],
 button {
     -webkit-box-sizing: content-box;
        -moz-box-sizing: content-box;
             box-sizing: content-box;
-}*/
+}
 
-/* Reset `button` and button-style `input` default styles */
-/*input[type="submit"],
+input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button {
     background: none;
-    border: 0;*/
-    /*color: inherit;*/
-    /* cursor: default; */
-    /*font: inherit;
+    border: 0;
+    color: inherit;
+    cursor: default; 
+    font: inherit;
     line-height: normal;
     overflow: visible;
     padding: 0;
@@ -30,10 +29,10 @@ input::-moz-focus-inner,
 button::-moz-focus-inner {
     border: 0;
     padding: 0;
-}*/
+}
 
-/* Make `a` like a button */
-/*[role="button"] {
+
+[role="button"] {
     color: inherit;
     cursor: default;
     display: inline-block;
@@ -43,18 +42,19 @@ button::-moz-focus-inner {
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
-}*/
+}
 
-/* Demo */
-/*[role="button"],
+
+[role="button"],
 input[type="submit"],
 input[type="reset"],
-input[type="button"],*/
+input[type="button"]*/
 
-.mdl-layout__content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.card-container {
+  height:400px;
+  width:100%;
+  margin:10px auto;
+  max-width: 300px;
 }
 
 button {
@@ -65,42 +65,13 @@ button {
   padding: 0 0.5em;
 }
 
-.card-container {
-  margin:auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height:400px;
-  width:100%;
-  margin:10px auto;
-  padding: 20px, 10px;
-}
-
-sc-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 300px;
-}
-
-.card-content {
-  height: 100%;
-}
-
-.card-content img {
-  max-width:100%;
-  max-height:100%;
-}
-
 .buttons {
   width:100%;
   margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;;
+  flex-direction: row;
 }
 
 .buttons button {
