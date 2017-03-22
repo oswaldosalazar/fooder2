@@ -42,14 +42,16 @@ export class FooderMainComponent implements OnInit {
     if (this.cards.length > 0) {
       self.cards[this.cardCursor++].likeEvent.emit({ like });
       // DO STUFF WITH YOUR CARD
+      console.log(like);
+      console.log(self.cards[this.cardCursor-1].name)
     }
-    console.log(this);
   }
 
   onCardLike(event) {
     var item = this.cards[this.cardCursor++];
     // DO STUFF WITH YOUR CARD
-    // console.log(item.name);
+    console.log(event.like);
+    console.log(item.name);
   }
 
   onRelease(event) { }
