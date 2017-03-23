@@ -8,10 +8,7 @@ export class SendSelectedService {
   constructor() { }
 
   getSelected(): Array<any> {
-    console.log("From Service: ", this.selected);
     return this.selected;
   }
-
-
 
 }

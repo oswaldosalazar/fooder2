@@ -1,4 +1,10 @@
-import { Component, ViewEncapsulation, ViewChild, TemplateRef, EventEmitter, NgModule, OnInit } from '@angular/core';
+import { Component, 
+         ViewEncapsulation, 
+         ViewChild, 
+         TemplateRef, 
+         EventEmitter, 
+         NgModule, 
+         OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { Http } from '@angular/http';
@@ -23,6 +29,7 @@ export class FooderMainComponent implements OnInit {
   currentDate: Date;
   cards: any[] = [];
   cardCursor: number = 0;
+  sentItem : any = {};
   orientation: string = "x";
   overlay: any = {
     like: {
@@ -43,20 +50,25 @@ export class FooderMainComponent implements OnInit {
     var self = this;
     if (this.cards.length > 0) {
       self.cards[this.cardCursor++].likeEvent.emit({ like });
-      // DO STUFF WITH YOUR CARD
-      console.log(like);
-      console.log(self.cards[this.cardCursor-1].name)
-
+      this.sentItem = {};
+      this.sentItem.name = self.cards[this.cardCursor-1].name;
+      this.sentItem.address = self.cards[this.cardCursor-1].address;
+      if (like) {
+        this.sendSelected.selected.push(this.sentItem);
+        this.sendSelected.getSelected();
+      }
     }
   }
 
   onCardLike(event) {
     var item = this.cards[this.cardCursor++];
-    // DO STUFF WITH YOUR CARD
-    console.log(event.like);
-    console.log(item.name);
-    this.sendSelected.selected.push(item.name);
-    this.sendSelected.getSelected();
+    this.sentItem = {};
+    this.sentItem.name = item.name;
+    this.sentItem.address = item.address;
+    if (event.like) {
+      this.sendSelected.selected.push(this.sentItem);
+      this.sendSelected.getSelected();
+    }
   }
 
   onRelease(event) { }
@@ -114,5 +126,6 @@ export class FooderMainComponent implements OnInit {
   ngOnInit(){
     this.getNearRestaurants();
   }
+
 }
 

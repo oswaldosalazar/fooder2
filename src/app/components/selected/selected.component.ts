@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, 
+         OnInit } from '@angular/core';
 import { SendSelectedService } from '../../services/send-selected.service'
 
 @Component({
@@ -8,12 +9,15 @@ import { SendSelectedService } from '../../services/send-selected.service'
 })
 export class SelectedComponent implements OnInit {
 
+  selectedCards = [];
+
   constructor( 
     private sendSelected: SendSelectedService
   ) { }
 
   displaySelected () {
-    console.log("From Selected Component: ", this.sendSelected.selected)
+    this.selectedCards = this.sendSelected.selected;
+    this.sendSelected.selected = [];
   }
 
   ngOnInit() {
