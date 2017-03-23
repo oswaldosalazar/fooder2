@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SendSelectedService } from '../../services/send-selected.service'
 
 @Component({
   selector: 'app-selected',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectedComponent implements OnInit {
 
-  constructor() { }
+  constructor( 
+    private sendSelected: SendSelectedService
+  ) { }
+
+  displaySelected () {
+    console.log("From Selected Component: ", this.sendSelected.selected)
+  }
 
   ngOnInit() {
+    this.displaySelected();
   }
 
 }
