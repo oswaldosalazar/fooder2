@@ -1,9 +1,10 @@
 import { Component, ViewEncapsulation, ViewChild, TemplateRef, EventEmitter, NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { Ng2SwipeCardsModule } from '../../components/ng2-swipe-cards/index';
-import { GeolocationService } from '../../services/geolocation.service';
 import { Http } from '@angular/http';
+import { GeolocationService } from '../../services/geolocation.service';
+import { SendSelectedService } from '../../services/send-selected.service'
+import { Ng2SwipeCardsModule } from '../../components/ng2-swipe-cards/index';
 
 @Component({
   selector: 'app-fooder-main',
@@ -34,6 +35,7 @@ export class FooderMainComponent implements OnInit {
 
   constructor(
     private geolocation: GeolocationService,
+    private sendSelected: SendSelectedService,
     private http: Http
   ) { }
 
@@ -44,6 +46,7 @@ export class FooderMainComponent implements OnInit {
       // DO STUFF WITH YOUR CARD
       console.log(like);
       console.log(self.cards[this.cardCursor-1].name)
+
     }
   }
 
@@ -52,6 +55,8 @@ export class FooderMainComponent implements OnInit {
     // DO STUFF WITH YOUR CARD
     console.log(event.like);
     console.log(item.name);
+    this.sendSelected.selected.push(item.name);
+    this.sendSelected.getSelected();
   }
 
   onRelease(event) { }

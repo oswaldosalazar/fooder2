@@ -6,14 +6,17 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './components/search/search.component';
+import { FooderMainComponent } from './components/fooder-main/fooder-main.component';
 import { Ng2SwipeCardsComponent } from './components/ng2-swipe-cards/ng2-swipe-cards.component';
+import { SelectedComponent } from './components/selected/selected.component';
 
 import { Ng2SwipeCardsDirective } from './directives/ng2-swipe-cards.directive';
 import { GeolocationService } from '../app/services/geolocation.service';
-import { FooderMainComponent } from './components/fooder-main/fooder-main.component';
+import { SendSelectedService } from '../app/services/send-selected.service';
 
 const appRoutes: Routes = [
   { path: 'search', component: SearchComponent},
+  { path: 'selected', component: SelectedComponent},
   { path: '', component: FooderMainComponent }
 ];
 
@@ -23,7 +26,8 @@ const appRoutes: Routes = [
     SearchComponent,
     Ng2SwipeCardsComponent,
     Ng2SwipeCardsDirective,
-    FooderMainComponent
+    FooderMainComponent,
+    SelectedComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    GeolocationService
+    GeolocationService,
+    SendSelectedService
   ],
   bootstrap: [AppComponent]
 })
