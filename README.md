@@ -1,27 +1,18 @@
-# Fooder2
+# Fooder2 - Use it on your phone!
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.31.
+How many times have you been out wondering what restaurant options are available?
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This mobile-first web app combines the Tinder cards logic with a restaurants app. You will see a deck of cards showing open restaurants around your area. Swipe right to move them to a "Selected" list or left to discard them.
 
-## Code scaffolding
+After going through the deck, open the menu and go to Selected and decide where to go easily!
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+This front-end app uses the following technologies:
 
-## Build
+* Material Design Lite (mobile-first responsive design)
+* Angular 2
+* Foursquare API
+* Geolocation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+I used the Tinder cards logic from this open source project:
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+https://github.com/ViCode/ng2-swipe-cards
