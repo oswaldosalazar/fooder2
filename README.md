@@ -1,5 +1,7 @@
 # Fooder2 - Use it on your phone!
 
+https://fooder2-fcfb7.firebaseapp.com/
+
 How many times have you been out wondering what restaurant options are available?
 
 This mobile-first web app combines the Tinder cards logic with a restaurants app. You will see a deck of cards showing open restaurants around your area. Swipe right to move them to a "Selected" list or left to discard them.
