@@ -100,7 +100,7 @@ export class FooderMainComponent implements OnInit {
               this.resultsJson = data.json();
               this.resultsArray = this.resultsJson.response.groups[0].items;
               this.resultsArray.map( elem => {
-                let venueSearchUrl = "https://api.foursquare.com/v2/venues/"+elem.venue.id+"/photos?client_id=NHF0X5EXQLHYJ3IG5FIYSJYD2R33BLQSKGGQUBSIYMXWFYA4&client_secret=5TRQLKFODOFFJW55T0FHBH3BWNW3RFAOBK24BK2BSPB2QD3C&v="+this.getDate();
+                let venueSearchUrl = "https://api.foursquare.com/v2/venues/"+elem.venue.id+"?client_id=NHF0X5EXQLHYJ3IG5FIYSJYD2R33BLQSKGGQUBSIYMXWFYA4&client_secret=5TRQLKFODOFFJW55T0FHBH3BWNW3RFAOBK24BK2BSPB2QD3C&v="+this.getDate();
                 this.http.get(venueSearchUrl)
                 .subscribe((venuePicsUrl) => {
                   let card:any = {};
@@ -112,7 +112,8 @@ export class FooderMainComponent implements OnInit {
                   card.rating = elem.venue.rating;
                   card.hours = elem.venue.hours;
                   card.address = elem.venue.location.address;
-                  card.url = venuePicsUrl.json().response.photos.items[0].prefix+'300x250'+venuePicsUrl.json().response.photos.items[0].suffix;
+                  card.url = venuePicsUrl.json().response.venue.bestPhoto.prefix+'300x250'+venuePicsUrl.json().response.venue.bestPhoto.suffix;
+                  console.log(venuePicsUrl.json().response);
                   this.cards.push(card);
                 });
               });
